@@ -25,7 +25,7 @@ class ProductService (private val productRepository: ProductRepository) {
         return this.productRepository.save(product)
     }
 
-    fun update(string: String, product: Product) : Product{
+    fun update(string: String, product: Product) : Product {
         val oldProduct = this.productRepository.findById(string)
             .orElseThrow{ throw NotFoundException("Product not found")}
         oldProduct.title = product.title
