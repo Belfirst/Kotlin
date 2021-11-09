@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 class Product {
 
     @Id
-    var id = ""
+    lateinit var id:String
     var title = ""
     var description = ""
     var image = ""
